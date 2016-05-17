@@ -1,0 +1,61 @@
+<!-- 
+	"about" page.
+-->
+<!DOCTYPE html>
+<html lang = "en" xmlns = "http://www.w3.org/1999/xhtml" >
+
+
+<head>
+	<title> TenuousDenizen </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png"
+	href="background.png" />
+</head>
+
+
+
+
+<body>
+
+	
+	<script src="js/header.js"></script> <!-- functions for header bar -->
+	<script src="js/categories.js"></script> <!-- functions for "browse by categories" side bar -->
+	<script src="js/content.js"></script> <!--  -->
+	<script src="js/by_date.js"></script> <!--  -->
+	
+
+	<div id="header">
+		<script type="text/javascript">
+			WriteHeader("header"); <!-- call function from header.js to write website header to element with id="header" -->
+		</script>
+	</div>
+	
+	<div id="categories">
+		<script type="text/javascript">
+			WriteCategories("categories"); <!-- call function from categories.js to write category browse menu to element with id="categories" -->
+		</script>
+	</div>
+	
+	<div id="content">
+		<script type="text/javascript">
+			WriteContent("content"); <!--  -->
+		</script>
+		
+			<h2 class="title"> About This Site. </h2>
+			<span class="important"> Use of Javascript! </span>
+		
+	</div>
+	
+	<div id="byDate">
+		<script type="text/javascript">
+			WriteBrowseDate("byDate"); <!--  -->
+		</script>
+	</div>
+	
+	
+	
+	
+	
+
+</body>
+</html>

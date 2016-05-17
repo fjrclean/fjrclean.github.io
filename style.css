@@ -1,0 +1,88 @@
+/* Site structure */
+body{background-image: url("background.png");}
+.site_banner {margin-left: 15%; margin-right: 15%; text-align: center; }
+.leftBar{width: 10%; margin-left: 15%; margin-top: 1%; vertical-align: top; text-align: center; word-wrap: break-word; float: left;}
+.content{width: 44%; margin: 1%; vertical-align: top; word-wrap: break-word; float: left; padding: 2%; padding-top: 0%;}
+	.identifier{text-align: center}
+.rightBar{width: 10%; margin-right: 15%; margin-top: 1%; vertical-align: top; text-align: center; word-wrap: break-word; float: left;}
+.comments{
+	width: 44%; 
+	margin-left: 28%; 
+	margin-right: 28%;
+	vertical-align: top;
+	clear: both;
+	
+}
+.comments_title{
+	text-align: center;
+}
+.comment_area{
+	float: center;
+}
+
+.content_title{margin-bottom: 0px}
+.content_sub_title{
+	border-bottom-style: solid; 
+	border-top-style: solid; 
+	border-width: 1px;
+	border-color: rgb(106,146,152);
+	clear: left;
+	box-shadow: 3px 3px 0px 3px pink inset; 
+	padding-left: 3px;
+	padding-top: 3px;
+}
+div {
+    background-image: url("tile_background.png");  
+	box-shadow: 0px 0px 5px 6px #888888; 
+	background-color: #ffffff;
+} 
+h4 {}
+a {padding-left: 5px; padding-right: 5px;}
+.site_title {margin-bottom: 0px}
+.site_sub_title {margin-top: 0px}
+span.source_ref {
+	position: relative;
+    bottom: 0.5em;
+    color: blue;
+    font-size: 0.8em;
+}
+.article_date{
+	color: blue; 
+	border-left-style: solid; 
+	border-color: gray; 
+	margin-top: 0px;
+}
+
+code {
+	/*font-family: "Courier New", Monospace;*/
+	background-color: #D8D8D8 ;
+
+}
+
+.basics{
+	border-style: dashed;
+	border-color: #FF3300;
+	border-width: 2px;
+	padding: 2px;
+	float: right;
+	background-image: none; 
+	box-shadow: 0px 0px 5px 2px #888888;
+	background-color: white;
+	max-width: 30%;
+
+}
+
+.contents{
+	border-style: solid;
+	border-color: rgb(106,146,152);
+	border-width: 3px;
+	background-image: none; 
+	box-shadow: 0px 0px 0px 0px #888888;
+	float: left;
+	background-color: transparent;
+	margin-bottom: 20px;
+}
+
+
+/* meanings */
+.important{color: red}

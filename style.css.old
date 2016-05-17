@@ -1,0 +1,30 @@
+/* Site layout */
+.search {float: left; width: 50%}
+.user {float: right; width: 50%}
+
+/*Site layout/structure */
+table { border-collapse: collapse; width: 100%; border: none}
+th, td {border: none}
+td.leftBar {width: 12.5%; vertical-align: top; text-align: center; box-shadow: 2px 0px 5px 4px #888888;}
+td.rightBar {width: 12.5%; vertical-align: top; text-align: center; box-shadow: -2px 0px 5px 4px #888888;}
+td.pageContent {width: 75%; padding: 10px}
+td.userBar {width: 45%; border: none; vertical-align: top; text-align: right}
+td.searchBar {border: none; vertical-align: bottom; text-align: center}		
+td.linksBar {width: 45%; border: none; vertical-align: top; text-align: left}
+th.banner {border: none; vertical-align: center; text-align: center}
+table.topBar {text-align: center; width: 90%; margin-left: 5%; margin-right: 5%; border: none; box-shadow: 0px 8px 5px 4px #888888;}
+		
+.sideBar {float: left; width: 15%}
+.content {float: right; width: 85%}
+.linkSubmit {border-bottom: 10px}
+.header {float: center}
+h1{display:inline}
+h2{display:inline}
+h3{display:inline}
+h4{display:inline}
+/* Form layout */
+/*form.content {border-style: dashed; border-width: thin}
+/* */
+span.title {text-align: center}
+span.error {color: red}
+span.success{color: green}
