@@ -1,0 +1,21 @@
+<h1 id="read-first">Read First</h1>
+<h2 id="serial-debugging">serial debugging</h2>
+<h2 id="common-issues-why-its-not-working">common issues why it's not working</h2>
+<p>If you can't think of any obvious reasons as to why nothing is showing up, it's very possible the ram is at fault. Having two different brands of ram dimm? is an obvious sign this is the issue (this caused it for me), but even if not, try booting with only one stick, or try any other available sticks you have. If that works, try two sticks again, changing the order.</p>
+<h2 id="booting-usb-flash-drive-for-live-installation">booting usb flash drive for live installation</h2>
+<p>Booting live GNU/Linux distros from grub2 seems to be tricky, I will show how to create a grub.cfg to with menu entries for some live distros, but it's handy to have SeaBIOS has a GRUB2 payload, which can easily boot USB flash drives like your typical non-free BIOS.</p>
+<pre><code>LABEL=
+sds</code></pre>
+<p>--</p>
+<h1 id="setting-up-flasherprogrammer.">Setting up Flasher/Programmer.</h1>
+<h2 id="using-a-beagle-bone-black">using a Beagle Bone Black</h2>
+<h2 id="using-an-arduino-uno">using an Arduino Uno</h2>
+<h2 id="using-a-raspberry-pi">using a raspberry pi</h2>
+<h2 id="using-flashrom-as-coreboot-payload-must-have-already-flashed-successfully-with-coreboot">using flashrom as coreboot payload (must have already flashed successfully with coreboot)</h2>
+<p>This allows experimental write-only support, so you can flash system rom while it's running. This is useful when you're experimenting or problem solving and are needing to reflash many times, as it reduces the wear of clip on flash chip and potential breaking of it, and might be faster too.</p>
+<p>--</p>
+<h1 id="compiling-coreboot">Compiling coreboot</h1>
+<h2 id="coreboot-settings">Coreboot settings</h2>
+<h2 id="payloads">Payloads</h2>
+<h2 id="grub2-modules">GRUB2 modules</h2>
+<p>--</p>
