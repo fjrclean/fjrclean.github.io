@@ -1,7 +1,11 @@
-<h1 id="encrypted-gnulinux-with-coreboot-and-grub">Encrypted GNU+Linux with Coreboot and Grub</h1>
+<h1 id="encrypted-gnulinux-with-coreboot-grub-and-luks.">Encrypted GNU+Linux with Coreboot, Grub and LUKS.</h1>
 <hr />
+<p><em>TAKE NOTE: I am by no means a security or cryptographic expert. I try to explain everything here in a way that I think would help me as a beginner, and I can not guarantee the security of the described setup, as it is a complex topic.</em></p>
 <p><em>I will be using Parabola GNU+Linux, a fork of Arch, for this example. Most of it will apply to other distros.</em></p>
-<h2 id="before-you-start">Before You Start</h2>
+<h2 id="an-overview-of-coreboot">an overview of coreboot</h2>
+<p>Coreboot is free software to replace the bios on your computer, specifically the hardware initialisation to get everything setup. The aspects of a proprietary bios that a normal user might see, such as a graphical boot menu, are not actually handled by coreboot. Instead, coreboot has the ability to run and pass control to other distinct programs, known as payloads. Grub is a payload.</p>
+<h2 id="an-overview-of-luks">an overview of LUKS</h2>
+<p>LUKS encryption uses creates an on-storage master key to decrypt the contents, which is itself encrypted with they key you set. One advantage of this is you can have multiple keys to access the device, as having multiple copies of master key encrypted by each user key?? is better than multiple encryptions of all your data. Your key is put through a key derivation function, which will always have the same output based on input. The point? It adds arbitrary time to each decrypt attempt which hugely reduces the effectiveness of brute force attacks, especially for weaker passphrases. A header is placed on the storage that identifies it as a LUKS device, and contains details about how to decrypt the device. These include a salt value, which is randomly generated on the creation of the LUKS key and goes with the key into the key derivation function. This counters precomputed attacks, as someone needs to get this salt value off your device before they can run their password tables through the function. Iteration time is another...</p>
 <h2 id="compiling-coreboot">compiling coreboot</h2>
 <h3 id="grub-options">grub options</h3>
 <p>These are the grub modules needed for encryption:</p>
@@ -28,6 +32,7 @@
 <h2 id="launching-distro-live-usb-from-grub">launching distro live usb from grub</h2>
 <h2 id="cryptsetup">cryptsetup</h2>
 <p><em>cryptsetup</em> is the commandline tool used to access the cryptographic features of the linux kernel.</p>
+<p>To create a luks device, you would run crypsetup luksFormat</p>
 <p>If you are placing the LUKS key inside initramfs, you should set the /boot directory where it resides to allow root access only. <em>chmod 700 /boot</em></p>
 <p>After this you would install your system onto that partiton.</p>
 <h2 id="grub-configuration">grub configuration</h2>
